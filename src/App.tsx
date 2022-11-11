@@ -7,7 +7,7 @@ import BookCard from './BookCard';
 function App() {
   return (
     <>
-    <UserCard name='Petr Rychlý' age={18} books={4} level={3} />
+    <UserCard name='Petr Rychlý' age={18} books={4} level={3} img='https://placem.at/people?w=200'/>
     <BookCard title='Moje kniha 1' icon='📗'/>
     </>
     /*<div className="App">
