@@ -41,7 +41,7 @@ function App() {
   return (
     <>
     {users.map(user => (<UserCard name={user.name} age={user.age} books={user.books} level={user.level} img={user.img}/>))}
-    {books.map(book => (<BookCard title={book.title} icon={book.icon}/>))}
+    {books.map(book => (<BookCard {...book}/>))}
     </>
   );
 }
