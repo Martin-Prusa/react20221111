@@ -1,13 +1,6 @@
 import React from "react";
 import Card from "./Card";
-
-interface UserCardProps {
-    name: string
-    age: number
-    books: number
-    level: number
-    img: string
-}
+import UserCardProps from "./UserCardProps";
 
 function UserCard({name, age, books, level, img}: UserCardProps) {
     return (

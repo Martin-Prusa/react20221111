@@ -1,10 +1,6 @@
 import React from "react";
+import BookCardProps from "./BookCardProps";
 import Card from "./Card";
-
-interface BookCardProps {
-    title: string
-    icon: string
-}
 
 function BookCard({ title, icon}: BookCardProps) {
     return (

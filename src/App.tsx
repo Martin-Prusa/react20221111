@@ -3,29 +3,46 @@ import React from 'react';
 import './App.css';
 import UserCard from './UserCard';
 import BookCard from './BookCard';
+import UserCardProps from './UserCardProps';
+import BookCardProps from './BookCardProps';
+
+const users: UserCardProps[] = [
+  {
+    name: 'Petr Rychlý',
+    age: 18,
+    books: 4,
+    level: 3,
+    img: 'https://placem.at/people?w=200'
+  },
+  {
+    name: 'Josef Pomalý',
+    age: 17,
+    books: 3,
+    level: 2,
+    img: 'https://placem.at/people?w=200'
+  },
+]
+const books: BookCardProps[] = [
+  {
+    title: 'Moje kniha 1',
+    icon: '📘'
+  },
+  {
+    title: 'Moje kniha 2',
+    icon: '📗'
+  },
+  {
+    title: 'Moje kniha 3',
+    icon: '📙'
+  },
+]
 
 function App() {
   return (
     <>
-    <UserCard name='Petr Rychlý' age={18} books={4} level={3} img='https://placem.at/people?w=200'/>
-    <BookCard title='Moje kniha 1' icon='📗'/>
+    {users.map(user => (<UserCard name={user.name} age={user.age} books={user.books} level={user.level} img={user.img}/>))}
+    {books.map(book => (<BookCard title={book.title} icon={book.icon}/>))}
     </>
-    /*<div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>*/
   );
 }
 
